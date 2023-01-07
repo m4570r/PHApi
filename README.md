@@ -41,22 +41,67 @@ La API de esta aplicación se puede utilizar para interactuar con la aplicación
 
 A continuación se proporciona una descripción de cada método de la API y cómo se utiliza:
 
-  - GET: Este método se utiliza para obtener información de la base de datos o de la API. Para hacer una solicitud GET a la API, envía una solicitud HTTP GET a la URL del servidor con el siguiente formato: http://<server>/api/<method>?<parameter1>=<value1>&<parameter2>=<value2>. Los parámetros son opcionales y se pueden utilizar para filtrar los resultados.
-Ejemplo: http://localhost/api/get?nombre=John devolvería todos los usuarios con el nombre "John" de la base de datos.
+  - GET: Este método se utiliza para obtener información de la base de datos o de la API. Para hacer una solicitud GET a la API, envía una solicitud HTTP GET a la URL del servidor con el siguiente formato: 
+  ```
+  http://<server>/api/<method>?<parameter1>=<value1>&<parameter2>=<value2>
+  ```
+  Los parámetros son opcionales y se pueden utilizar para filtrar los resultados.
+Ejemplo: 
+  ```
+  http://localhost/api/get?nombre=John 
+  ```
+  devolvería todos los usuarios con el nombre "John" de la base de datos.
 
-  - POST: Este método se utiliza para crear un nuevo registro en la base de datos. Para hacer una solicitud POST a la API, envía una solicitud HTTP POST a la URL del servidor con el siguiente formato: http://<server>/api/<method>. La solicitud debe incluir un cuerpo de solicitud en formato JSON con los datos del nuevo registro.
-Ejemplo: http://localhost/api/post con un cuerpo de solicitud {"nombre": "Alice", "edad": 25} crearía un nuevo usuario con el nombre "Alice" y la edad 25 en la base de datos.
+  - POST: Este método se utiliza para crear un nuevo registro en la base de datos. Para hacer una solicitud POST a la API, envía una solicitud HTTP POST a la URL del servidor con el siguiente formato: 
+  ```
+  http://<server>/api/<method>
+  ```
+  La solicitud debe incluir un cuerpo de solicitud en formato JSON con los datos del nuevo registro.
+Ejemplo: 
+  ```
+  http://localhost/api/post 
+  ```
+  con un cuerpo de solicitud 
+  ```
+  {"nombre": "Alice", "edad": 25}
+  ```
+  crearía un nuevo usuario con el nombre "Alice" y la edad 25 en la base de datos.
 
-  - PUT: Este método se utiliza para actualizar un registro existente en la base de datos. Para hacer una solicitud PUT a la API, envía una solicitud HTTP PUT a la URL del servidor con el siguiente formato: http://<server>/api/<method>?<parameter1>=<value1>&<parameter2>=<value2>. La solicitud debe incluir un cuerpo de solicitud en formato JSON con los datos actualizados. Los parámetros son opcionales y se pueden utilizar para filtrar los resultados.
-Ejemplo: http://localhost/api/put?nombre=Alice con un cuerpo de solicitud {"edad": 26} actualizaría la edad del usuario con el nombre "Alice" a 26 en la base de datos.
+  - PUT: Este método se utiliza para actualizar un registro existente en la base de datos. Para hacer una solicitud PUT a la API, envía una solicitud HTTP PUT a la URL del servidor con el siguiente formato: 
+  ```
+  http://<server>/api/<method>?<parameter1>=<value1>&<parameter2>=<value2>
+  ```
+  La solicitud debe incluir un cuerpo de solicitud en formato JSON con los datos actualizados. Los parámetros son opcionales y se pueden utilizar para filtrar los resultados.
+Ejemplo: 
+  ```
+  http://localhost/api/put?nombre=Alice
+  ```
+  con un cuerpo de solicitud 
+  ```
+  {"id": 1, "edad": 26} 
+  ```
+  actualizaría la edad del usuario con el nombre "Alice" a 26 en la base de datos.
 
   - DELETE: Este método se utiliza para eliminar un registro de la base de datos. Para hacer una solicitud DELETE a la API, envía una solicitud HTTP DELETE a la URL del servidor con el siguiente formato:
-http://<server>/api/<method>?<parameter1>=<value1>&<parameter2>=<value2>. Los parámetros son opcionales y se pueden utilizar para filtrar los resultados.
+  ```
+  http://<server>/api/<method>?<parameter1>=<value1>&<parameter2>=<value2>
+  ```
+Los parámetros son opcionales y se pueden utilizar para filtrar los resultados.
+Ejemplo: 
+  ```
+  http://localhost/api/delete?nombre=Alice 
+  ```
+  eliminaría al usuario con el nombre "Alice" de la base de datos.
 
-Ejemplo: http://localhost/api/delete?nombre=Alice eliminaría al usuario con el nombre "Alice" de la base de datos.
-
-Versión: Este método se utiliza para obtener la versión de la API. Para hacer una solicitud al método de versión, envía una solicitud HTTP GET a la URL del servidor con el siguiente formato: http://<server>/api/version.
-Ejemplo: http://localhost/api/version devolvería la versión de la API.
+Versión: Este método se utiliza para obtener la versión de la API. Para hacer una solicitud al método de versión, envía una solicitud HTTP GET a la URL del servidor con el siguiente formato:
+```
+http://<server>/api/version.
+```
+Ejemplo: 
+  ```
+  http://localhost/api/version
+  ```
+  devolvería la versión de la API.
 
 
 Eso por el momento, estare actualizando el codigo saludos ante cualquier duda o consulta miguel.php@gmail.com
