@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^version$ index.php/version [L]
+
